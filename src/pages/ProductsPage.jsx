@@ -129,11 +129,24 @@ const ProductsPage = () => {
     const [viewMode, setViewMode] = useState('grid');
     const [isFilterOpen, setIsFilterOpen] = useState(false);
 
+    // Sync state with URL params when navigating from navbar
+    useEffect(() => {
+        const urlCategory = searchParams.get('category');
+        const urlSubcategory = searchParams.get('subcategory');
+
+        if (urlCategory !== selectedCategory) {
+            setSelectedCategory(urlCategory);
+        }
+        if (urlSubcategory !== selectedSubcategory) {
+            setSelectedSubcategory(urlSubcategory);
+        }
+    }, [searchParams]);
+
     useEffect(() => {
         const params = new URLSearchParams();
         if (selectedCategory) params.set('category', selectedCategory);
         if (selectedSubcategory) params.set('subcategory', selectedSubcategory);
-        setSearchParams(params);
+        setSearchParams(params, { replace: true });
     }, [selectedCategory, selectedSubcategory, setSearchParams]);
 
     useEffect(() => {

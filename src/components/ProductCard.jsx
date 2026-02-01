@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ExternalLink, Video, Eye } from 'lucide-react';
 
 // Brand Colors
@@ -16,8 +17,9 @@ const ProductCard = ({ product, onViewDetails }) => {
     };
 
     return (
-        <div
-            className="group bg-white rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2"
+        <Link
+            to={`/products/${product.id}`}
+            className="group bg-white rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 block"
             style={{
                 border: `1px solid ${BRAND.light}`,
                 boxShadow: '0 4px 20px rgba(26, 46, 90, 0.06)'
@@ -52,15 +54,12 @@ const ProductCard = ({ product, onViewDetails }) => {
 
                 {/* Video Badge */}
                 {product.videoUrl && (
-                    <a
-                        href={product.videoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="absolute top-3 right-3 w-10 h-10 rounded-full text-white flex items-center justify-center transition-all hover:scale-110"
+                    <span
+                        className="absolute top-3 right-3 w-10 h-10 rounded-full text-white flex items-center justify-center"
                         style={{ backgroundColor: BRAND.primary }}
                     >
                         <Video className="w-4 h-4" />
-                    </a>
+                    </span>
                 )}
 
                 {/* Hover Overlay */}
@@ -68,14 +67,13 @@ const ProductCard = ({ product, onViewDetails }) => {
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-6"
                     style={{ background: `linear-gradient(to top, ${BRAND.primary}ee, ${BRAND.primary}99, transparent)` }}
                 >
-                    <button
-                        onClick={() => onViewDetails?.(product)}
+                    <span
                         className="px-6 py-3 text-white font-semibold rounded-xl transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 flex items-center gap-2"
                         style={{ backgroundColor: BRAND.accent }}
                     >
                         <Eye className="w-4 h-4" />
                         View Details
-                    </button>
+                    </span>
                 </div>
             </div>
 
@@ -121,21 +119,19 @@ const ProductCard = ({ product, onViewDetails }) => {
                         {product.price}
                     </span>
                     {product.videoUrl && (
-                        <a
-                            href={product.videoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1.5 text-xs font-semibold transition-colors hover:opacity-70"
+                        <span
+                            className="flex items-center gap-1.5 text-xs font-semibold"
                             style={{ color: BRAND.primary }}
                         >
                             <ExternalLink className="w-3.5 h-3.5" />
                             Demo
-                        </a>
+                        </span>
                     )}
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
 export default ProductCard;
+

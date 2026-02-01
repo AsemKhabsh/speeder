@@ -1,46 +1,106 @@
 {
     "categories": [
         {
-            "id": "network-devices",
-            "name": "Network Devices",
-            "nameAr": "أجهزة الشبكات",
+            "id": "switches",
+            "name": "Switches",
+            "nameAr": "سويتشات",
             "icon": "Network",
             "subcategories": [
                 {
-                    "id": "routers",
-                    "name": "Routers",
-                    "nameAr": "راوترات"
+                    "id": "poe-switch",
+                    "name": "PoE Switch",
+                    "nameAr": "سويتش PoE"
                 },
                 {
-                    "id": "switches",
-                    "name": "Switches",
-                    "nameAr": "سويتشات"
-                },
-                {
-                    "id": "cables",
-                    "name": "Cables & Connectors",
-                    "nameAr": "كابلات وموصلات"
-                },
-                {
-                    "id": "networking-tools",
-                    "name": "Networking Tools",
-                    "nameAr": "أدوات الشبكات"
+                    "id": "network-switch",
+                    "name": "Network Switch",
+                    "nameAr": "سويتش شبكة"
                 }
             ]
         },
         {
-            "id": "printers",
-            "name": "Printers",
-            "nameAr": "طابعات",
+            "id": "networking",
+            "name": "Networking",
+            "nameAr": "الشبكات",
+            "icon": "Wifi",
+            "subcategories": [
+                {
+                    "id": "router",
+                    "name": "Router",
+                    "nameAr": "راوتر"
+                },
+                {
+                    "id": "antina",
+                    "name": "Antina",
+                    "nameAr": "أنتينا"
+                }
+            ]
+        },
+        {
+            "id": "panels-enclosure-racks",
+            "name": "Panels & Enclosure & Racks",
+            "nameAr": "لوحات وخزائن ورفوف",
+            "icon": "Server",
+            "subcategories": [
+                {
+                    "id": "cable-management",
+                    "name": "Cable management",
+                    "nameAr": "إدارة الكابلات"
+                },
+                {
+                    "id": "cabinet",
+                    "name": "Cabinet",
+                    "nameAr": "خزانة"
+                }
+            ]
+        },
+        {
+            "id": "copper-system",
+            "name": "Copper System",
+            "nameAr": "نظام النحاس",
+            "icon": "Cable",
+            "subcategories": [
+                {
+                    "id": "copper-patch-cords",
+                    "name": "Copper Patch Cords",
+                    "nameAr": "كابلات توصيل نحاسية"
+                },
+                {
+                    "id": "cables-copper",
+                    "name": "Cables Copper",
+                    "nameAr": "كابلات نحاسية"
+                },
+                {
+                    "id": "connectors-jacks",
+                    "name": "Connectors & Jacks",
+                    "nameAr": "موصلات ومقابس"
+                }
+            ]
+        },
+        {
+            "id": "printers-barcode-scanners",
+            "name": "Printers & Barcode Scanners",
+            "nameAr": "طابعات وماسحات باركود",
             "icon": "Printer",
             "subcategories": []
         },
         {
-            "id": "barcode-scanners",
-            "name": "Barcode Scanners",
-            "nameAr": "ماسحات الباركود",
-            "icon": "ScanBarcode",
-            "subcategories": []
+            "id": "parts",
+            "name": "Parts",
+            "nameAr": "قطع غيار",
+            "icon": "Wrench",
+            "subcategories": [
+                {
+                    "id": "poe-separator",
+                    "name": "PoE Separator",
+                    "nameAr": "فاصل PoE"
+                },
+                {
+                    "id": "power-adapter",
+                    "name": "Power Adapter",
+                    "nameAr": "محول طاقة"
+                }
+            ]
         },
         {
             "id": "others",
@@ -55,9 +115,14 @@
             "id": "router-001",
             "name": "Enterprise Fiber Router",
             "nameAr": "راوتر فايبر للشركات",
-            "category": "network-devices",
-            "subcategory": "routers",
+            "category": "networking",
+            "subcategory": "router",
             "image": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=400&h=300&fit=crop",
+            "images": [
+                "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800&h=600&fit=crop",
+                "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop",
+                "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop"
+            ],
             "description": "High-performance enterprise-grade fiber optic router designed for businesses requiring stable and fast internet connectivity. Ideal for offices and commercial establishments.",
             "descriptionAr": "راوتر فايبر عالي الأداء مصمم للشركات التي تتطلب اتصال إنترنت مستقر وسريع. مثالي للمكاتب والمنشآت التجارية.",
             "specifications": [
@@ -68,6 +133,8 @@
                 "Management: Web UI, App Control"
             ],
             "videoUrl": "https://www.youtube.com/watch?v=example1",
+            "catalogUrl": "/catalogs/router-001-catalog.pdf",
+            "driversUrl": "/drivers/router-001-drivers.zip",
             "featured": true,
             "price": "Contact for Price"
         },
@@ -75,9 +142,13 @@
             "id": "router-002",
             "name": "Dual-Band Wireless Router",
             "nameAr": "راوتر لاسلكي ثنائي الموجة",
-            "category": "network-devices",
-            "subcategory": "routers",
+            "category": "networking",
+            "subcategory": "router",
             "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+            "images": [
+                "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+                "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800&h=600&fit=crop"
+            ],
             "description": "Advanced dual-band wireless router with extended range coverage. Perfect for homes and small offices with multiple connected devices.",
             "descriptionAr": "راوتر لاسلكي متقدم ثنائي الموجة مع تغطية ممتدة. مثالي للمنازل والمكاتب الصغيرة مع أجهزة متعددة متصلة.",
             "specifications": [
@@ -88,6 +159,8 @@
                 "Features: QoS, Parental Control"
             ],
             "videoUrl": null,
+            "catalogUrl": "/catalogs/router-002-catalog.pdf",
+            "driversUrl": null,
             "featured": true,
             "price": "Contact for Price"
         },
@@ -95,8 +168,8 @@
             "id": "router-003",
             "name": "4G LTE Mobile Router",
             "nameAr": "راوتر محمول 4G LTE",
-            "category": "network-devices",
-            "subcategory": "routers",
+            "category": "networking",
+            "subcategory": "router",
             "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=300&fit=crop",
             "description": "Portable 4G LTE router with built-in battery. Take your internet connection anywhere with this compact and powerful device.",
             "descriptionAr": "راوتر 4G LTE محمول مع بطارية مدمجة. خذ اتصالك بالإنترنت في أي مكان مع هذا الجهاز المدمج والقوي.",
@@ -115,8 +188,8 @@
             "id": "switch-001",
             "name": "24-Port Gigabit Managed Switch",
             "nameAr": "سويتش 24 منفذ جيجابت مُدار",
-            "category": "network-devices",
-            "subcategory": "switches",
+            "category": "switches",
+            "subcategory": "network-switch",
             "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop",
             "description": "Enterprise-class 24-port gigabit managed switch with advanced VLAN, QoS, and security features. Rack-mountable design for server rooms.",
             "descriptionAr": "سويتش مُدار بفئة المؤسسات 24 منفذ جيجابت مع ميزات VLAN وQoS والأمان المتقدمة. تصميم قابل للتركيب على الرف لغرف الخوادم.",
@@ -135,8 +208,8 @@
             "id": "switch-002",
             "name": "8-Port PoE+ Switch",
             "nameAr": "سويتش 8 منافذ PoE+",
-            "category": "network-devices",
-            "subcategory": "switches",
+            "category": "switches",
+            "subcategory": "poe-switch",
             "image": "https://images.unsplash.com/photo-1551703599-6b3e8379aa8c?w=400&h=300&fit=crop",
             "description": "Power over Ethernet switch with 8 PoE+ ports. Ideal for IP cameras, access points, and VoIP phones without additional power cables.",
             "descriptionAr": "سويتش طاقة عبر الإيثرنت مع 8 منافذ PoE+. مثالي لكاميرات IP ونقاط الوصول وهواتف VoIP بدون كابلات طاقة إضافية.",
@@ -155,8 +228,8 @@
             "id": "switch-003",
             "name": "5-Port Desktop Switch",
             "nameAr": "سويتش مكتبي 5 منافذ",
-            "category": "network-devices",
-            "subcategory": "switches",
+            "category": "switches",
+            "subcategory": "network-switch",
             "image": "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=400&h=300&fit=crop",
             "description": "Compact and affordable 5-port gigabit desktop switch. Plug-and-play operation, perfect for home networks and small offices.",
             "descriptionAr": "سويتش مكتبي جيجابت 5 منافذ صغير وبأسعار معقولة. تشغيل التوصيل والتشغيل، مثالي للشبكات المنزلية والمكاتب الصغيرة.",
@@ -175,8 +248,8 @@
             "id": "cable-001",
             "name": "Cat6 Network Cable - 305m Box",
             "nameAr": "كابل شبكة Cat6 - صندوق 305 متر",
-            "category": "network-devices",
-            "subcategory": "cables",
+            "category": "copper-system",
+            "subcategory": "cables-copper",
             "image": "https://images.unsplash.com/photo-1563770557171-0a96e7f0b72d?w=400&h=300&fit=crop",
             "description": "Premium quality Cat6 UTP cable in bulk box. Ideal for professional network installations with high-speed data transmission.",
             "descriptionAr": "كابل Cat6 UTP عالي الجودة في صندوق بالجملة. مثالي لتركيبات الشبكات المهنية مع نقل بيانات عالي السرعة.",
@@ -195,8 +268,8 @@
             "id": "cable-002",
             "name": "Fiber Optic Patch Cord SC-SC",
             "nameAr": "كابل فايبر أوبتك SC-SC",
-            "category": "network-devices",
-            "subcategory": "cables",
+            "category": "copper-system",
+            "subcategory": "copper-patch-cords",
             "image": "https://images.unsplash.com/photo-1601412436009-d964bd02edbc?w=400&h=300&fit=crop",
             "description": "Single-mode fiber optic patch cord with SC connectors. Low insertion loss for long-distance high-speed data transmission.",
             "descriptionAr": "كابل فايبر أوبتك أحادي الوضع مع موصلات SC. فقد إدراج منخفض لنقل البيانات عالي السرعة لمسافات طويلة.",
@@ -215,8 +288,8 @@
             "id": "cable-003",
             "name": "RJ45 Connectors Pack (100pcs)",
             "nameAr": "موصلات RJ45 علبة (100 قطعة)",
-            "category": "network-devices",
-            "subcategory": "cables",
+            "category": "copper-system",
+            "subcategory": "connectors-jacks",
             "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=300&fit=crop",
             "description": "High-quality gold-plated RJ45 connectors for Cat5e and Cat6 cables. Easy to crimp with standard tools.",
             "descriptionAr": "موصلات RJ45 عالية الجودة مطلية بالذهب لكابلات Cat5e وCat6. سهلة التركيب بأدوات قياسية.",
@@ -235,8 +308,8 @@
             "id": "tool-001",
             "name": "Professional Crimping Tool Kit",
             "nameAr": "طقم أدوات التجعيد المهنية",
-            "category": "network-devices",
-            "subcategory": "networking-tools",
+            "category": "others",
+            "subcategory": null,
             "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop",
             "description": "Complete network cable crimping tool kit including crimper, cable tester, wire stripper, and RJ45 connectors.",
             "descriptionAr": "طقم أدوات تجعيد كابلات الشبكة الكامل يتضمن أداة التجعيد واختبار الكابلات ومزيل العزل وموصلات RJ45.",
@@ -255,8 +328,8 @@
             "id": "tool-002",
             "name": "Network Cable Tester",
             "nameAr": "جهاز اختبار كابلات الشبكة",
-            "category": "network-devices",
-            "subcategory": "networking-tools",
+            "category": "others",
+            "subcategory": null,
             "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop",
             "description": "Digital network cable tester for RJ45 and RJ11 connections. Identifies open, short, and crossed wires instantly.",
             "descriptionAr": "جهاز اختبار كابلات الشبكة الرقمي لاتصالات RJ45 وRJ11. يحدد الأسلاك المفتوحة والقصيرة والمتقاطعة فوراً.",
@@ -275,7 +348,7 @@
             "id": "printer-001",
             "name": "Laser Multifunction Printer",
             "nameAr": "طابعة ليزر متعددة الوظائف",
-            "category": "printers",
+            "category": "printers-barcode-scanners",
             "subcategory": null,
             "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop",
             "description": "High-speed laser multifunction printer with print, scan, copy, and fax capabilities. Ideal for busy offices.",
@@ -295,7 +368,7 @@
             "id": "printer-002",
             "name": "Thermal Label Printer",
             "nameAr": "طابعة ملصقات حرارية",
-            "category": "printers",
+            "category": "printers-barcode-scanners",
             "subcategory": null,
             "image": "https://images.unsplash.com/photo-1579389083395-4507e98b5e67?w=400&h=300&fit=crop",
             "description": "Direct thermal label printer for shipping, barcode, and product labels. No ink or toner required.",
@@ -315,7 +388,7 @@
             "id": "printer-003",
             "name": "POS Receipt Printer",
             "nameAr": "طابعة إيصالات نقاط البيع",
-            "category": "printers",
+            "category": "printers-barcode-scanners",
             "subcategory": null,
             "image": "https://images.unsplash.com/photo-1586953208270-767889fa9b4a?w=400&h=300&fit=crop",
             "description": "Fast and reliable thermal receipt printer for point of sale systems. Compatible with all major POS software.",
@@ -335,7 +408,7 @@
             "id": "scanner-001",
             "name": "Wireless 2D Barcode Scanner",
             "nameAr": "ماسح باركود 2D لاسلكي",
-            "category": "barcode-scanners",
+            "category": "printers-barcode-scanners",
             "subcategory": null,
             "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
             "description": "High-performance wireless 2D barcode scanner with long battery life. Reads QR codes and all 1D/2D barcodes.",
@@ -355,7 +428,7 @@
             "id": "scanner-002",
             "name": "Desktop Barcode Scanner",
             "nameAr": "ماسح باركود مكتبي",
-            "category": "barcode-scanners",
+            "category": "printers-barcode-scanners",
             "subcategory": null,
             "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
             "description": "Hands-free desktop barcode scanner with presentation mode. Perfect for retail checkout and inventory management.",
@@ -375,7 +448,7 @@
             "id": "scanner-003",
             "name": "USB Handheld Barcode Scanner",
             "nameAr": "ماسح باركود يدوي USB",
-            "category": "barcode-scanners",
+            "category": "printers-barcode-scanners",
             "subcategory": null,
             "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
             "description": "Affordable USB wired barcode scanner for 1D barcodes. Plug and play with no driver installation required.",
@@ -415,8 +488,8 @@
             "id": "other-002",
             "name": "Network Server Rack 42U",
             "nameAr": "خزانة خادم شبكة 42U",
-            "category": "others",
-            "subcategory": null,
+            "category": "panels-enclosure-racks",
+            "subcategory": "cabinet",
             "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop",
             "description": "Professional 42U floor-standing server rack with cable management. Lockable doors and adjustable mounting rails.",
             "descriptionAr": "خزانة خادم أرضية 42U احترافية مع إدارة الكابلات. أبواب قابلة للقفل وقضبان تركيب قابلة للتعديل.",
